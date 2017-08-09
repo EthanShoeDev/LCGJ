@@ -34,7 +34,7 @@ public class PlayerShoot : MonoBehaviour
                 rot = Quaternion.Euler(0,0,0);
             else if(mov.DirectionFacing == Vector3.left)
                 rot = Quaternion.Euler(0,0,-90);
-	        Instantiate(Projectile, spawnPoint.position, rot);
+	        SimplePool.Spawn(Projectile, spawnPoint.position, rot);
             anim.SetTrigger("playerCast");
 	    }
 	}

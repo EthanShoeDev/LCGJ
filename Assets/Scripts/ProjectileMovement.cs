@@ -15,6 +15,11 @@ public class ProjectileMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    void OnEnable()
+    {
+        isMoving = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -22,15 +27,18 @@ public class ProjectileMovement : MonoBehaviour
             transform.Translate(new Vector3(0, -MoveSpeed * Time.deltaTime));
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        isMoving = false;
-        anim.SetTrigger("Explode");
+        if (!col.CompareTag("Player") && !col.CompareTag("Projectile"))
+        {
+            isMoving = false;
+            anim.SetTrigger("Explode");
+        }
     }
 
     public void ExplodeFinish()
     {
-        Destroy(this);
+        SimplePool.Despawn(gameObject);
     }
 }
 
