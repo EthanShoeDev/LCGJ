@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: StrongFireball
+  m_Controller: {fileID: 9100000, guid: 2e1a1a0d44c4dab43b9efc0e3572cfe8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: c51f93dac2805b14e8c89a0476030525, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c51f93dac2805b14e8c89a0476030525, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8395ada1be937674081e7ecaa6b9fc18, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4070fb6d60bd3d64eaaa4acc30e944bc, type: 2}

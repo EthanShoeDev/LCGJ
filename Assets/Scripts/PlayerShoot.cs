@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
 
-    public GameObject Projectile;
+    public List<GameObject> Projectiles;
 
     private Transform spawnPoint;
     private Animator anim;
@@ -24,18 +24,27 @@ public class PlayerShoot : MonoBehaviour
     {
 	    if (Input.GetButtonDown("Fire1"))
 	    {
-	        //TODO: Add pooling
-	        Quaternion rot = Quaternion.Euler(0, 0, 90);
-            if (mov.DirectionFacing == Vector3.up)
-                rot = Quaternion.Euler(0,0,180);
-            else if(mov.DirectionFacing == Vector3.right)
-                rot = Quaternion.Euler(0,0,90);
-            else if(mov.DirectionFacing == Vector3.down)
-                rot = Quaternion.Euler(0,0,0);
-            else if(mov.DirectionFacing == Vector3.left)
-                rot = Quaternion.Euler(0,0,-90);
-	        SimplePool.Spawn(Projectile, spawnPoint.position, rot);
+	        SimplePool.Spawn(Projectiles[0], spawnPoint.position, RotationFromFacingDirection(mov.DirectionFacing));
             anim.SetTrigger("playerCast");
 	    }
-	}
+        if (Input.GetButtonDown("Fire2"))
+        {
+            SimplePool.Spawn(Projectiles[1], spawnPoint.position, RotationFromFacingDirection(mov.DirectionFacing));
+            anim.SetTrigger("playerCast");
+        }
+    }
+
+    private Quaternion RotationFromFacingDirection(Vector3 Direction)
+    {
+        Quaternion rot = Quaternion.Euler(0, 0, 90);
+        if (Direction == Vector3.up)
+            rot = Quaternion.Euler(0, 0, 180);
+        else if (Direction == Vector3.right)
+            rot = Quaternion.Euler(0, 0, 90);
+        else if (Direction == Vector3.down)
+            rot = Quaternion.Euler(0, 0, 0);
+        else if (Direction == Vector3.left)
+            rot = Quaternion.Euler(0, 0, -90);
+        return rot;
+    }
 }
