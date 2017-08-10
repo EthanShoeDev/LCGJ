@@ -30,34 +30,40 @@ public class PlayerMovement : MonoBehaviour
 	    rigid.velocity = velocity;
 
 	    Vector3 scale = transform.localScale;
-	    if (velocity.x < 0)
+	    if (velocity.x < 0 && Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
 	    {
 	        scale.x = -Mathf.Abs(scale.x);
             DirectionFacing = Vector3.left;
+	        anim.SetBool("isHorizontal", true);
         }
-        else if(velocity.x > 0)
+        else if(velocity.x > 0 && Mathf.Abs(velocity.x) > Mathf.Abs(velocity.y))
 	    {
 	        scale.x = Mathf.Abs(scale.x);
             DirectionFacing = Vector3.right;
+            anim.SetBool("isHorizontal", true);
         }
-        transform.localScale = scale;
-
         //Need Sprite For When Wizard Faces Camera
 	    if (velocity.y < 0)
 	    {
-	        DirectionFacing = Vector3.down;
-	    }
-	    else if(velocity.y > 0)
-	    {
-	        DirectionFacing = Vector3.up;
-	    }
-
-        if (velocity != Vector3.zero)
-	    {
-	        if (Mathf.Abs(velocity.x) >= Mathf.Abs(velocity.y))
-	            anim.SetBool("isHorizontal", true);
-	        else
+	        if (Mathf.Abs(velocity.x) < Mathf.Abs(velocity.y))
+	        {
+	            scale.x = Mathf.Abs(scale.x);
+                DirectionFacing = Vector3.down;
 	            anim.SetBool("isHorizontal", false);
-	    }
+            }
+            anim.SetBool("isFacing", true);
+        }
+        else if(velocity.y > 0 && Mathf.Abs(velocity.x) < Mathf.Abs(velocity.y))
+	    {
+	        scale.x = Mathf.Abs(scale.x);
+            DirectionFacing = Vector3.up;
+	        anim.SetBool("isHorizontal", false);
+        }
+
+        if (DirectionFacing != Vector3.down)
+	        anim.SetBool("isFacing", false);
+
+	    transform.localScale = scale;
+
     }
 }
