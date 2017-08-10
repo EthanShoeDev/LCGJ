@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+vc0xGXCAIAAH0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U9tu2kAQ/RXk51JhE2jpWwsJrZQEFFr1edkd4xHrXWsvJRDx791Z27HjNk+2zzkzc+bil4TZCrh7Yg518mWUfhglaHUJziD/qg4SAjgJoFeYa1PeigMstXU2wDmTFgJltKNoFaCXUfIcHuMFhZyb0As9R9fwxkE5MJ3u/yqvuGRlBWKHF+jEWavOapnSAhoFueZaSrSNjcSdKyKSJ3ZOAimQhZZiadIWgIfCUap+4CbPLbjGjmHnFZowmTpj8k27gjKVzB5rT3+Y9FQjm82jnzrpwz/8OI10bnT5va2bTqiGK5Afg0POrOvNsw+v3hr36sTkke0l/C5APeq10V6JQDrjKdRbyFbd52trywL4scNrqwPQV+8vhnq4xu6flxLLPVEfb2pgJ3Wcddw5mLCVH8FwvAjbpAgoufhl4Sc79E+nIe7QWBeopkvmnb5HdVwbFH11i6/QunsssZ4knQL1s9fekDq5jUOm9r1baqPA9JNUoJh0520o7IZLH3DvR90x7nS7lIZr/5ZBSIQ7/WQyoLb69LpeW+jTA9hi451E1U9GzGMY7VIrVR+lHbAUt/MmZxy6nR48irfXmIjsZirSiUizT8Bms3Q8hc9zmPJ0P12k+ZwtkniuqEKjTG5rp818wqJVl1yF06SMtKbR2rAq/iDCsNMaL6W2nRJVrnfcAKhNnSEav/4FUEsDBBQAAAgIAACYn+tu4XRLNAAAADcAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RslIoKSpN1VFQKs7IL3etKClKBAqlJeYUg8QKMsvyS4B8JefUvJLUIqVaAFBLAwQUAAAICAAAmJ/r04AtTm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9AzNNBRUEovSizIKAaKGII4pZkpIHa0UoqRiXGKoUGKoZF5aqKpqaGucaqFWapxsmGSsaVhmlmipVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAmJ/r3NMRlwgCAAB9BAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/rbuF0SzQAAAA3AAAAEgAkAAAAAAAAAAAAAABVAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif69OALU5tAAAAeAAAAAkAJAAAAAAAAAAAAAAA3QIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACVAwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+vPzFDOBwIAAH0EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1U9tu2kAQ/RXk51JhE2jpWwsJrZQEFFr1edkd4xHrXWsvJRDx791Z27HjNk+2zzkzc+bil4TZCrh7Yg518mWUfhglaHUJziD/qg4SAjgJoFeYa1PeigMstXU2wDmTFgJltKNoFaCXUfIcHuMFhZyb0As9R9fwxkE5MJ3u/yqvuGRlBWKHF+jEWavOapnSAhoFueZaSrSNjcSdKyKSJ3ZOAimQhZZiadIWgIfCUap+4CbPLbjGjmHnFZowmTpj8k27gjKVzB5rT3+Y9FQjm82jnzrpwz/8OI10bnT5va2bTqiGK5Afg0POrOvNsw+v3hr36sTkke0l/C5APeq10V6JQDrjKdRbyFbd52trywL4scNrqwPQV+8vhnq4xu6flxLLPVEfb2pgJ3Wcddw5mLCVH8FwvAjb2A4oufhl4Sc79E+nIe7QWBeoRs680/eojmuDoq9u8RVad48l1pOkU6B+9tobUie3ccjUvndLbRSYfpIKFJPuvA2F3XDpA+79qDvGnW6X0nDt3zIIiXCnn0wG1FafXtdrC316AFtsvJOo+smIeQyjXWql6qO0A5bidt7kjEO304NH8fYaE5HdTEU6EWn2Cdhslo6n8HkOU57up4s0n7NFEs8VVWiUyW3ttJlPWLTqkqtwmpSR1jRaG1bFH0QYdlrjpdS2U6LK9Y4bALWpM0Tj179QSwMEFAAACAgAAJif627hdEs0AAAANwAAABIAJABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVsrJT85OTVGyUigpKk3VUVAqzsgvd60oKUoECqUl5hSDxAoyy/JLgHwl59S8ktQipVoAUEsDBBQAAAgIAACYn+vTgC1ObQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0DM00FFQSi9KLMgoBooYgjilmSkgdrRSipGJcYqhQYqhkXlqoqmpoa5xqoVZqnGyYZKxpWGaWaKlUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+vPzFDOBwIAAH0EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+tu4XRLNAAAADcAAAASACQAAAAAAAAAAAAAAFQCAABncmFwaDBfZWRpdG9yLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAmJ/r04AtTm0AAAB4AAAACQAkAAAAAAAAAAAAAADcAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAADAAMAHAEAAJQDAAAAAA==
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -413,6 +413,26 @@ Prefab:
         type: 2}
       propertyPath: repathRate
       value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 50125075827485004, guid: de27f4d66da116d42894739983ce10bf,
+        type: 2}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50125075827485004, guid: de27f4d66da116d42894739983ce10bf,
+        type: 2}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61582500220756056, guid: de27f4d66da116d42894739983ce10bf,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 50125075827485004, guid: de27f4d66da116d42894739983ce10bf,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: de27f4d66da116d42894739983ce10bf, type: 2}
@@ -1110,7 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c651d6469508af4e840aa7624519884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 3
+  MaxSpeed: 5
   DirectionFacing: {x: 0, y: 0, z: 0}
 --- !u!114 &2038715184
 MonoBehaviour:
@@ -1133,7 +1153,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2038715179}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -1155,7 +1175,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.6915705, y: -0.25148034}

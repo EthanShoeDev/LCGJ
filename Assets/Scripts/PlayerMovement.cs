@@ -9,23 +9,25 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Vector3 DirectionFacing;
 
     private Animator anim;
+    private Rigidbody2D rigid;
 
 	// Use this for initialization
 	void Start ()
 	{
 	    anim = GetComponent<Animator>();
+	    rigid = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void FixedUpdate ()
 	{
 	    Vector3 velocity = new Vector3
 	    {
-	        x = Input.GetAxis("Horizontal") * MaxSpeed * Time.deltaTime,
-	        y = Input.GetAxis("Vertical") * MaxSpeed * Time.deltaTime,
+	        x = Input.GetAxisRaw("Horizontal") * MaxSpeed,
+	        y = Input.GetAxisRaw("Vertical") * MaxSpeed,
 	        z = transform.position.z
 	    };
-	    transform.position += velocity;
+	    rigid.velocity = velocity;
 
 	    Vector3 scale = transform.localScale;
 	    if (velocity.x < 0)
