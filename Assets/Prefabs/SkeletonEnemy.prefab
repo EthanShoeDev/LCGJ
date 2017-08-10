@@ -25,6 +25,9 @@ GameObject:
   - component: {fileID: 61582500220756056}
   - component: {fileID: 50125075827485004}
   - component: {fileID: 114386015389493980}
+  - component: {fileID: 58967036162675694}
+  - component: {fileID: 58628749967758642}
+  - component: {fileID: 58690834643010394}
   m_Layer: 0
   m_Name: SkeletonEnemy
   m_TagString: Untagged
@@ -38,8 +41,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1697025320684090}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09, y: 1.94, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.1, y: 5.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,6 +68,51 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58628749967758642
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697025320684090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.425}
+  serializedVersion: 2
+  m_Radius: 0.375
+--- !u!58 &58690834643010394
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697025320684090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.81
+--- !u!58 &58967036162675694
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697025320684090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.425}
+  serializedVersion: 2
+  m_Radius: 0.375
 --- !u!61 &61582500220756056
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -77,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00000023841858, y: 0.03417945}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -88,7 +136,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9411683, y: 1.4196839}
+  m_Size: {x: 0.75, y: 0.85}
   m_EdgeRadius: 0
 --- !u!95 &95903318664280644
 Animator:
@@ -120,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 1
+  detailedGizmos: 0
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
@@ -147,9 +195,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  speed: 2
-  nextWaypointDistance: 0.2
-  repathRate: 0.45
+  speed: 4
+  nextWaypointDistance: 1.1
+  repathRate: 0.25
 --- !u!212 &212185594535345302
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -179,8 +227,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -132420611
-  m_SortingLayer: -3
+  m_SortingLayerID: 219181457
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e83e6612abe677a43a0f3d8b832c5d99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
