@@ -179,11 +179,13 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
     <Compile Include="Assets\Scripts\CameraFollow.cs" />
+    <Compile Include="Assets\Scripts\EnemyDmgHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
     <Compile Include="Assets\Scripts\SimplePool.cs" />
     <Compile Include="Assets\Scripts\Skeleton.cs" />
+    <Compile Include="Assets\Scripts\SmallHealthBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />

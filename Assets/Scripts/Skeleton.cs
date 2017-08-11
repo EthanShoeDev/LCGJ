@@ -26,6 +26,7 @@ public class Skeleton : MonoBehaviour
 
     private Rigidbody2D rigid;
     private Animator anim;
+    private SpriteRenderer renderer;
     private float lastRepath = -999f;
 
     public void Start()
@@ -33,6 +34,10 @@ public class Skeleton : MonoBehaviour
         seeker = GetComponent<Seeker>();
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<SpriteRenderer>();
+
+        if (target == null)
+            target = GameObject.Find("Player").transform;
         //Start a new path to the targetPosition, return the result to the OnPathComplete function
         seeker.StartPath(transform.position, target.position, OnPathComplete);
         StartCoroutine(RepeatTrySearchPath());
@@ -99,9 +104,9 @@ public class Skeleton : MonoBehaviour
                 anim.SetBool("isHorizontal", true);
                 Vector3 scale = transform.localScale;
                 if (dir.x < 0)
-                    scale.x = -Mathf.Abs(scale.x);
+                    renderer.flipX = true;
                 else if (dir.x > 0)
-                    scale.x = Mathf.Abs(scale.x);
+                    renderer.flipX = false;
                 transform.localScale = scale;
             }
             else

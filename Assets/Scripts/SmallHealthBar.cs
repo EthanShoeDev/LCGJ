@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SmallHealthBar : MonoBehaviour
+{
+    public float Health
+    {
+        get { return _health; }
+        set
+        {
+            _health = value;
+            if (_health < 0)
+                _health = 0;
+            if (_health > 100)
+                _health = 100;
+            UpdateBar();
+        }
+    }
+
+    private float _health = 100;
+    private SpriteRenderer foreground;
+    private float maxWidth;
+
+    // Use this for initialization
+    void Start()
+    {
+        //Could possibly return wrong renderer
+        foreground = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        if(foreground.gameObject.name != "Foreground")
+            throw new NotSupportedException();
+        maxWidth = foreground.size.x;
+    }
+
+    void UpdateBar()
+    {
+        float percent = Health / 100;
+        Vector2 size = foreground.size;
+        size.x = maxWidth * percent;
+        Vector2 pos = foreground.transform.localPosition;
+        pos.x -= (foreground.size.x - size.x) / 2;
+        foreground.transform.localPosition = pos;
+        foreground.size = size;
+    }
+}
