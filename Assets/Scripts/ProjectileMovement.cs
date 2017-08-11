@@ -5,29 +5,24 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-
+    public float Damage = 10f;
     public float MoveSpeed = 5f;
+
+
     private Animator anim;
     private bool isMoving = true;
-    private Collider2D[] colliders;
+    private bool hasExploded = false;
 
     // Use this for initialization
     void Start()
     {
         anim = GetComponent<Animator>();
-        colliders = GetComponents<Collider2D>();
     }
 
     void OnEnable()
     {
         isMoving = true;
-        if (colliders != null)
-        {
-            foreach (Collider2D collider in colliders)
-            {
-                collider.enabled = true;
-            }
-        }
+        hasExploded = false;
     }
 
     // Update is called once per frame
@@ -39,12 +34,12 @@ public class ProjectileMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (!col.CompareTag("Player") && !col.CompareTag("Projectile") && !col.CompareTag("Bumper"))
+        if (!col.CompareTag("Player") && !col.CompareTag("Projectile") && !col.CompareTag("Bumper") && !hasExploded)
         {
-            foreach (Collider2D collider in colliders)
-            {
-                collider.enabled = false;
-            }
+            EnemyDmgHandler dmgHandler = col.transform.gameObject.GetComponent<EnemyDmgHandler>();
+            if (dmgHandler != null)
+                dmgHandler.Health -= Damage;
+            hasExploded = true;
             isMoving = false;
             anim.SetTrigger("Explode");
         }

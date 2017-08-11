@@ -21,6 +21,7 @@ public class SmallHealthBar : MonoBehaviour
 
     private float _health = 100;
     private SpriteRenderer foreground;
+    private SpriteRenderer bckground;
     private float maxWidth;
 
     // Use this for initialization
@@ -28,6 +29,7 @@ public class SmallHealthBar : MonoBehaviour
     {
         //Could possibly return wrong renderer
         foreground = transform.GetChild(0).GetComponent<SpriteRenderer>();
+        bckground = GetComponent<SpriteRenderer>();
         if(foreground.gameObject.name != "Foreground")
             throw new NotSupportedException();
         maxWidth = foreground.size.x;
@@ -35,6 +37,24 @@ public class SmallHealthBar : MonoBehaviour
 
     void UpdateBar()
     {
+        if (Health == 100)
+        {
+            Color32 bckColor = bckground.color;
+            Color32 forColor = foreground.color;
+            bckColor.a = 0;
+            forColor.a = 0;
+            bckground.color = bckColor;
+            foreground.color = forColor;
+        }
+        else if (bckground.color.a == 0 || foreground.color.a == 0)
+        {
+            Color32 bckColor = bckground.color;
+            Color32 forColor = foreground.color;
+            bckColor.a = 0;
+            forColor.a = 0;
+            bckground.color = bckColor;
+            foreground.color = forColor;
+        }
         float percent = Health / 100;
         Vector2 size = foreground.size;
         size.x = maxWidth * percent;

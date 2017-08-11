@@ -17,7 +17,12 @@ public class EnemyDmgHandler : MonoBehaviour
                 return -9999f;
             }
         }
-        set { healthBar.Health = value; }
+        set
+        {
+            healthBar.Health = value;
+            if (Health <= 0)
+                Destroy(transform.gameObject);
+        }
     }
 
     private SmallHealthBar healthBar;
@@ -36,11 +41,11 @@ public class EnemyDmgHandler : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col)
     {
         
-        if (col.CompareTag("Projectile") && col.IsTouchingLayers(LayerMask.NameToLayer("Enemy")))
-        {
-            Health -= 10f;
-            if(Health <= 0)
-                Destroy(transform.gameObject);
-        }
+        //if (col.CompareTag("Projectile") && col.IsTouchingLayers(LayerMask.NameToLayer("Enemy")))
+        //{
+        //    Health -= 10f;
+        //    if(Health <= 0)
+        //        Destroy(transform.gameObject);
+        //}
     }
 }
