@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Pathfinding.Util;
 using UnityEngine;
 
 public class EnemyDmgHandler : MonoBehaviour
@@ -25,27 +26,41 @@ public class EnemyDmgHandler : MonoBehaviour
         }
     }
 
+    public List<Vector3> AttackPoints;
+    public float AttackDamage = 5f;
+    public float AttackDist = 0.5f;
+    public float AttackCooldown = 1.5f;
+
+    private float coolDownRemaining;
     private SmallHealthBar healthBar;
+    private EnemyMovement movement;
+    private PlayerDamage player;
 
-	// Use this for initialization
-	void Start ()
-	{
-	    healthBar = GetComponentInChildren<SmallHealthBar>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void OnTriggerEnter2D(Collider2D col)
+    // Use this for initialization
+    void Start()
     {
-        
-        //if (col.CompareTag("Projectile") && col.IsTouchingLayers(LayerMask.NameToLayer("Enemy")))
-        //{
-        //    Health -= 10f;
-        //    if(Health <= 0)
-        //        Destroy(transform.gameObject);
-        //}
+        healthBar = GetComponentInChildren<SmallHealthBar>();
+        movement = GetComponent<EnemyMovement>();
+        player = movement.target.GetComponent<PlayerDamage>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float dist = Vector3.Distance(transform.position, movement.target.position);
+        foreach (Vector3 point in AttackPoints)
+        {
+            if (Vector2.Distance(transform.position + point, movement.target.position) <= AttackDist)
+            {
+                //Attack
+                if (coolDownRemaining <= 0)
+                {
+                    player.Health -= AttackDamage;
+                    coolDownRemaining = AttackCooldown;
+                }
+            }
+        }
+        if (coolDownRemaining >= 0)
+            coolDownRemaining -= Time.deltaTime;
     }
 }
