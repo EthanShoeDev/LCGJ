@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 8a695e56a51b9fa4d8be91ca434a0d7c
-timeCreated: 1502478802
+guid: 989dfd8231b7d7c48a509616b4466f3b
+timeCreated: 1502493343
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Portal Layered_0
-    21300002: Portal Layered_1
-    21300004: Portal Layered_2
-    21300006: Portal Layered_3
-    21300008: Portal Layered_4
-    21300010: Portal Layered_5
-    21300012: Portal Layered_6
-    21300014: Portal Layered_7
+    21300000: Smoky Ashes_0
+    21300002: Smoky Ashes_1
+    21300004: Smoky Ashes_2
+    21300006: Smoky Ashes_3
+    21300008: Smoky Ashes_4
+    21300010: Smoky Ashes_5
+    21300012: Smoky Ashes_6
+    21300014: Smoky Ashes_7
+    21300016: Smoky Ashes_8
+    21300018: Smoky Ashes_9
+    21300020: Smoky Ashes_10
+    21300022: Smoky Ashes_11
+    21300024: Smoky Ashes_12
+    21300026: Smoky Ashes_13
+    21300028: Smoky Ashes_14
+    21300030: Smoky Ashes_15
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -53,7 +61,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 75
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -107,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Portal Layered_0
+      name: Smoky Ashes_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
-        width: 112
-        height: 112
+        y: 450
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,13 +129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_1
+      name: Smoky Ashes_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 224
-        width: 112
-        height: 112
+        x: 105
+        y: 450
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,13 +143,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_2
+      name: Smoky Ashes_2
       rect:
         serializedVersion: 2
-        x: 224
-        y: 224
-        width: 112
-        height: 112
+        x: 210
+        y: 450
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,13 +157,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_3
+      name: Smoky Ashes_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 450
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 450
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_5
       rect:
         serializedVersion: 2
         x: 0
-        y: 112
-        width: 112
-        height: 112
+        y: 300
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,13 +199,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_4
+      name: Smoky Ashes_6
       rect:
         serializedVersion: 2
-        x: 112
-        y: 112
-        width: 112
-        height: 112
+        x: 105
+        y: 300
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,13 +213,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_5
+      name: Smoky Ashes_7
       rect:
         serializedVersion: 2
-        x: 224
-        y: 112
-        width: 112
-        height: 112
+        x: 210
+        y: 300
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,27 +227,111 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Portal Layered_6
+      name: Smoky Ashes_8
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 300
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_9
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 300
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 150
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_12
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 150
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_13
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 150
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 150
+        width: 105
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Smoky Ashes_15
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 112
-        height: 112
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Portal Layered_7
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 112
-        height: 112
+        width: 105
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

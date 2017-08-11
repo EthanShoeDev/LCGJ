@@ -22,7 +22,10 @@ public class EnemyDmgHandler : MonoBehaviour
         {
             healthBar.Health = value;
             if (Health <= 0)
+            {
                 Destroy(transform.gameObject);
+                SimplePool.Spawn(AshEffect, transform.position, Quaternion.identity);
+            }
         }
     }
 
@@ -30,6 +33,7 @@ public class EnemyDmgHandler : MonoBehaviour
     public float AttackDamage = 5f;
     public float AttackDist = 0.5f;
     public float AttackCooldown = 1.5f;
+    public GameObject AshEffect;
 
     private float coolDownRemaining;
     private SmallHealthBar healthBar;

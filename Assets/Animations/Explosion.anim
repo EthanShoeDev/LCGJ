@@ -85,7 +85,7 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.5833333
-    functionName: ExplodeFinish
+    functionName: AnimationFinish
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

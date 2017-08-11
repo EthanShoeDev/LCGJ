@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114050313474148572}
   - component: {fileID: 58539535648849144}
   - component: {fileID: 50541678633208844}
+  - component: {fileID: 114531318595070404}
   m_Layer: 0
   m_Name: StrongFireball
   m_TagString: Projectile
@@ -109,6 +110,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Damage: 20
   MoveSpeed: 5
+--- !u!114 &114531318595070404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1807367509318884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef2f7c3af62bedb448544e8df99ef22e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeBeforeDespawn: 20
+  DespawnAfterAnim: 1
 --- !u!212 &212516548437078848
 SpriteRenderer:
   m_ObjectHideFlags: 1

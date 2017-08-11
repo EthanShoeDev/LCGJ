@@ -44,11 +44,6 @@ public class ProjectileMovement : MonoBehaviour
             anim.SetTrigger("Explode");
         }
     }
-
-    public void ExplodeFinish()
-    {
-        SimplePool.Despawn(gameObject);
-    }
 }
 
 

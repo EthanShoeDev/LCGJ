@@ -258,12 +258,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoints:
-  - {x: 0, y: 0.5}
-  - {x: 0, y: 0}
-  - {x: 0, y: -0.5}
+  - {x: 0, y: 0.5, z: 1.1754945e-38}
+  - {x: 0, y: 0, z: 1.1754945e-38}
+  - {x: 0, y: -0.5, z: 1.1754945e-38}
   AttackDamage: 5
   AttackDist: 1.1
   AttackCooldown: 1.5
+  AshEffect: {fileID: 1600451834259438, guid: 880b22dd1803c9045bc3fb41abae95dd, type: 2}
 --- !u!114 &114747445390931748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,7 +278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   drawGizmos: 1
-  detailedGizmos: 0
+  detailedGizmos: 1
   startEndModifier:
     addPoints: 0
     exactStartPoint: 3
