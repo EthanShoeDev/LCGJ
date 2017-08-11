@@ -33,6 +33,7 @@ public class SmallHealthBar : MonoBehaviour
         if(foreground.gameObject.name != "Foreground")
             throw new NotSupportedException();
         maxWidth = foreground.size.x;
+        UpdateBar();
     }
 
     void UpdateBar()
@@ -50,8 +51,8 @@ public class SmallHealthBar : MonoBehaviour
         {
             Color32 bckColor = bckground.color;
             Color32 forColor = foreground.color;
-            bckColor.a = 0;
-            forColor.a = 0;
+            bckColor.a = 1;
+            forColor.a = 1;
             bckground.color = bckColor;
             foreground.color = forColor;
         }
