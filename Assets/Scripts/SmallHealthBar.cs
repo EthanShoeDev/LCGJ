@@ -40,17 +40,17 @@ public class SmallHealthBar : MonoBehaviour
     {
         if (Health == 100)
         {
-            Color32 bckColor = bckground.color;
-            Color32 forColor = foreground.color;
+            Color bckColor = bckground.color;
+            Color forColor = foreground.color;
             bckColor.a = 0;
             forColor.a = 0;
             bckground.color = bckColor;
             foreground.color = forColor;
         }
-        else if (bckground.color.a <= 0.1 || foreground.color.a <= 0.1)
+        else if (bckground.color.a == 0 || foreground.color.a == 0)
         {
-            Color32 bckColor = bckground.color;
-            Color32 forColor = foreground.color;
+            Color bckColor = bckground.color;
+            Color forColor = foreground.color;
             bckColor.a = 1;
             forColor.a = 1;
             bckground.color = bckColor;
