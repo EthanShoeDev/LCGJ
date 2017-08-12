@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class PlayerShoot : MonoBehaviour
 {
-
+    public GameObject ProjectilesParentObj;
     public List<GameObject> Projectiles;
-
     private Transform spawnPoint;
     private Animator anim;
     private PlayerMovement mov;
@@ -24,13 +23,11 @@ public class PlayerShoot : MonoBehaviour
     {
 	    if (Input.GetButtonDown("Fire1"))
 	    {
-	        SimplePool.Spawn(Projectiles[0], spawnPoint.position, RotationFromFacingDirection(mov.DirectionFacing));
-            anim.SetTrigger("playerCast");
+	        Shoot(Projectiles[0]);
 	    }
         if (Input.GetButtonDown("Fire2"))
         {
-            SimplePool.Spawn(Projectiles[1], spawnPoint.position, RotationFromFacingDirection(mov.DirectionFacing));
-            anim.SetTrigger("playerCast");
+            Shoot(Projectiles[1]);
         }
     }
 
@@ -46,5 +43,13 @@ public class PlayerShoot : MonoBehaviour
         else if (Direction == Vector3.left)
             rot = Quaternion.Euler(0, 0, -90);
         return rot;
+    }
+
+    private void Shoot(GameObject projectile)
+    {
+        GameObject shot = SimplePool.Spawn(projectile, spawnPoint.position, RotationFromFacingDirection(mov.DirectionFacing));
+        anim.SetTrigger("playerCast");
+        if (ProjectilesParentObj != null)
+            shot.transform.parent = ProjectilesParentObj.transform;
     }
 }
