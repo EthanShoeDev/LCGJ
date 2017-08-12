@@ -27,7 +27,7 @@ public class PlayerHealthBar : MonoBehaviour {
 	{
         controller = GameController.Instance;
 	    forgroundImg = transform.GetChild(0).GetComponent<Image>();
-	    Health = controller.MaxHealth;
+	    Health = controller.PlayerHealth;
 	}
 	
 	// Update is called once per frame

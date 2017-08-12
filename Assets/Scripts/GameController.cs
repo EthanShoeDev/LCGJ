@@ -21,6 +21,7 @@ public class GameController : MonoBehaviour
 	        Destroy(gameObject);
         DontDestroyOnLoad(this);
 	    CurrentLevelIndex = Levels.IndexOf(SceneManager.GetActiveScene().name);
+	    PlayerHealth = MaxHealth;
 	}
 
 	// Update is called once per frame
