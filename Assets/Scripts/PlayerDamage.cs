@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerDamage : MonoBehaviour
 {
-
     public bool GodMode = false;
 
     public float Health
@@ -15,15 +14,9 @@ public class PlayerDamage : MonoBehaviour
 
     private PlayerHealthBar healthBar;
 
-	// Use this for initialization
-	void Start ()
-	{
-        //This probably isnt the best solution
-	    healthBar = GameObject.Find("Healthbar").GetComponent<PlayerHealthBar>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start()
+    {
+        healthBar = PlayerHealthBar.gUI;
+    }
 }
