@@ -5,6 +5,17 @@ using UnityEngine.UI;
 
 public class PlayerHealthBar : MonoBehaviour {
 
+    public static PlayerHealthBar gUI;
+
+    private void Awake()
+    {
+        if(gUI != null)
+        {
+            Debug.LogWarning("More than one Player Health Bar");
+        }
+        gUI = this;
+    }
+
     public float Health
     {
         get { return controller.PlayerHealth; }
