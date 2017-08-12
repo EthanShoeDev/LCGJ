@@ -28,6 +28,16 @@ public class EnemyMovement : MonoBehaviour
     private Animator anim;
     private SpriteRenderer spriteImg;
     private float lastRepath = -999f;
+    private bool startRun = false;
+
+    void OnEnable()
+    {
+        if(!startRun)
+            return;
+        lastRepath = -999f;
+        seeker.StartPath(transform.position, target.position, OnPathComplete);
+        StartCoroutine(RepeatTrySearchPath());
+    }
 
     public void Start()
     {
@@ -35,12 +45,12 @@ public class EnemyMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         spriteImg = GetComponent<SpriteRenderer>();
-
         if (target == null)
             target = GameObject.Find("Player").transform;
         //Start a new path to the targetPosition, return the result to the OnPathComplete function
         seeker.StartPath(transform.position, target.position, OnPathComplete);
         StartCoroutine(RepeatTrySearchPath());
+        startRun = true;
     }
 
     private IEnumerator RepeatTrySearchPath()

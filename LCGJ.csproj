@@ -182,6 +182,7 @@
     <Compile Include="Assets\Scripts\DespawnTimer.cs" />
     <Compile Include="Assets\Scripts\EnemyDmgHandler.cs" />
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthBar.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />

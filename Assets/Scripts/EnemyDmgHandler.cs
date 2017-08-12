@@ -23,7 +23,7 @@ public class EnemyDmgHandler : MonoBehaviour
             healthBar.Health = value;
             if (Health <= 0)
             {
-                Destroy(transform.gameObject);
+                SimplePool.Despawn(transform.gameObject);
                 SimplePool.Spawn(AshEffect, transform.position, Quaternion.identity);
             }
         }
@@ -45,12 +45,15 @@ public class EnemyDmgHandler : MonoBehaviour
     {
         healthBar = GetComponentInChildren<SmallHealthBar>();
         movement = GetComponent<EnemyMovement>();
-        player = movement.target.GetComponent<PlayerDamage>();
+        if(movement.target != null)
+            player = movement.target.GetComponent<PlayerDamage>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player == null && movement.target != null)
+            player = movement.target.GetComponent<PlayerDamage>();
         float dist = Vector3.Distance(transform.position, movement.target.position);
         foreach (Vector3 point in AttackPoints)
         {
@@ -59,7 +62,8 @@ public class EnemyDmgHandler : MonoBehaviour
                 //Attack
                 if (coolDownRemaining <= 0)
                 {
-                    player.Health -= AttackDamage;
+                    if(player != null)
+                        player.Health -= AttackDamage;
                     coolDownRemaining = AttackCooldown;
                 }
             }

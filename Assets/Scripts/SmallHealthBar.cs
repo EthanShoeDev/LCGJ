@@ -23,6 +23,14 @@ public class SmallHealthBar : MonoBehaviour
     private SpriteRenderer foreground;
     private SpriteRenderer bckground;
     private float maxWidth;
+    private bool startRun = false;
+
+    void OnEnable()
+    {
+        if(!startRun)
+            return;
+        Health = 100;
+    }
 
     // Use this for initialization
     void Start()
@@ -34,6 +42,7 @@ public class SmallHealthBar : MonoBehaviour
             throw new NotSupportedException();
         maxWidth = foreground.size.x;
         UpdateBar();
+        startRun = true;
     }
 
     void UpdateBar()
