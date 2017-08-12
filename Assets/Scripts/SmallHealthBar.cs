@@ -13,13 +13,15 @@ public class SmallHealthBar : MonoBehaviour
             _health = value;
             if (_health < 0)
                 _health = 0;
-            if (_health > 100)
-                _health = 100;
+            if (_health > MaxHealth)
+                _health = MaxHealth;
             UpdateBar();
         }
     }
 
-    private float _health = 100;
+    public float MaxHealth = 100;
+
+    private float _health;
     private SpriteRenderer foreground;
     private SpriteRenderer bckground;
     private float maxWidth;
@@ -29,7 +31,7 @@ public class SmallHealthBar : MonoBehaviour
     {
         if(!startRun)
             return;
-        Health = 100;
+        Health = MaxHealth;
     }
 
     // Use this for initialization
@@ -41,13 +43,13 @@ public class SmallHealthBar : MonoBehaviour
         if(foreground.gameObject.name != "Foreground")
             throw new NotSupportedException();
         maxWidth = foreground.size.x;
-        UpdateBar();
+        Health = MaxHealth;
         startRun = true;
     }
 
     void UpdateBar()
     {
-        if (Health == 100)
+        if (Health == MaxHealth)
         {
             Color bckColor = bckground.color;
             Color forColor = foreground.color;
@@ -65,7 +67,7 @@ public class SmallHealthBar : MonoBehaviour
             bckground.color = bckColor;
             foreground.color = forColor;
         }
-        float percent = Health / 100;
+        float percent = Health / MaxHealth;
         Vector2 size = foreground.size;
         size.x = maxWidth * percent;
         Vector2 pos = foreground.transform.localPosition;

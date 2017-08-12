@@ -7,26 +7,27 @@ public class PlayerHealthBar : MonoBehaviour {
 
     public float Health
     {
-        get { return _health; }
+        get { return controller.PlayerHealth; }
         set
         {
-            _health = value;
-            if (_health < 0)
-                _health = 0;
-            if (_health > 100)
-                _health = 100;
-            forgroundImg.fillAmount = _health / 100f;
+            controller.PlayerHealth = value;
+            if (controller.PlayerHealth < 0)
+                controller.PlayerHealth = 0;
+            if (controller.PlayerHealth > controller.MaxHealth)
+                controller.PlayerHealth = controller.MaxHealth;
+            forgroundImg.fillAmount = controller.PlayerHealth / controller.MaxHealth;
         }
     }
 
+    private GameController controller;
     private Image forgroundImg;
-
-    private float _health = 100;
 
 	// Use this for initialization
 	void Start ()
 	{
+        controller = GameController.Instance;
 	    forgroundImg = transform.GetChild(0).GetComponent<Image>();
+	    Health = controller.MaxHealth;
 	}
 	
 	// Update is called once per frame

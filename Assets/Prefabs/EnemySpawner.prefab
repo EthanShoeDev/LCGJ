@@ -53,5 +53,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Enemy: {fileID: 1232621548783192, guid: de27f4d66da116d42894739983ce10bf, type: 2}
   EnemyParentObj: {fileID: 0}
-  TimeToSpawn: 3
+  TimeToSpawn: 7
   StartWithSpawned: 1
