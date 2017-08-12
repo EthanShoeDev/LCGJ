@@ -21,11 +21,11 @@ public class PlayerShoot : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-	    if (Input.GetButtonDown("Fire1"))
+	    if (Input.GetKeyDown(KeyCode.N))
 	    {
 	        Shoot(Projectiles[0]);
 	    }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             Shoot(Projectiles[1]);
         }
