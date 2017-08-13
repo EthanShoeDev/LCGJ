@@ -184,12 +184,18 @@
     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\Helper\BMG_Selector.cs" />
+    <Compile Include="Assets\Scripts\Helper\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\Helper\PauseManager.cs" />
+    <Compile Include="Assets\Scripts\Helper\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\Helper\SoundManagerSelector.cs" />
     <Compile Include="Assets\Scripts\PlayerDamage.cs" />
     <Compile Include="Assets\Scripts\PlayerHealthBar.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerShoot.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\ProjectileMovement.cs" />
+    <Compile Include="Assets\Scripts\RepeatingBck.cs" />
     <Compile Include="Assets\Scripts\SimplePool.cs" />
     <Compile Include="Assets\Scripts\SmallHealthBar.cs" />
   </ItemGroup>

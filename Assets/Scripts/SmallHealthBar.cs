@@ -41,7 +41,7 @@ public class SmallHealthBar : MonoBehaviour
         foreground = transform.GetChild(0).GetComponent<SpriteRenderer>();
         bckground = GetComponent<SpriteRenderer>();
         if(foreground.gameObject.name != "Foreground")
-            throw new NotSupportedException();
+            Debug.LogError("Could not find foreground to small heathbar");
         maxWidth = foreground.size.x;
         Health = MaxHealth;
         startRun = true;
