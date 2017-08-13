@@ -42,12 +42,14 @@ public class EnemyDmgHandler : MonoBehaviour
     private SmallHealthBar healthBar;
     private EnemyMovement movement;
     private PlayerDamage player;
+    private Animator anim;
 
     // Use this for initialization
     void Start()
     {
         healthBar = GetComponentInChildren<SmallHealthBar>();
         movement = GetComponent<EnemyMovement>();
+        anim = GetComponent<Animator>();
         if(movement.target != null)
             player = movement.target.GetComponent<PlayerDamage>();
     }
@@ -68,6 +70,7 @@ public class EnemyDmgHandler : MonoBehaviour
                     if(player != null)
                         player.Health -= AttackDamage;
                     coolDownRemaining = AttackCooldown;
+                    anim.SetTrigger("Attack");
                 }
             }
         }

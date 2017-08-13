@@ -119,8 +119,13 @@ public class EnemyMovement : MonoBehaviour
                 transform.localScale = scale;
             }
             else
+            {
                 anim.SetBool("isHorizontal", false);
-
+                if(dir.y > 0)
+                    anim.SetBool("isFacing", false);
+                else
+                    anim.SetBool("isFacing", true);
+            }
         }
 
         //Check if we are close enough to the next waypoint
