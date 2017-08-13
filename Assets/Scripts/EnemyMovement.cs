@@ -74,7 +74,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void SearchPath()
     {
-        if (target == null) throw new System.InvalidOperationException("Target is null");
+        if (target == null) Debug.LogError("Can't Find Player");
         lastRepath = Time.time;
         Vector3 targetPosition = target.position;
         seeker.StartPath(transform.position, targetPosition, OnPathComplete);
@@ -86,7 +86,7 @@ public class EnemyMovement : MonoBehaviour
         {
             path = p;
             //Reset the waypoint counter
-            currentWaypoint = 0;
+            currentWaypoint = 1;
         }
     }
 

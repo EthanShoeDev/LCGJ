@@ -13,9 +13,10 @@ public class RepeatingBck : MonoBehaviour
     public float Speed = 5f;
     public Direction ScrollDirection = Direction.Left;
     [HideInInspector] public bool isDupl = false;
+    [HideInInspector] public Vector3 startPos;
 
-    private Vector3 startPos;
     private float dist;
+    private RepeatingBck orgin;
 
 	// Use this for initialization
 	void Start ()
@@ -29,7 +30,9 @@ public class RepeatingBck : MonoBehaviour
         if (!isDupl)
 	    {
 	        GameObject dupl = Instantiate(gameObject, transform.position, Quaternion.identity, transform.parent);
-	        dupl.GetComponent<RepeatingBck>().isDupl = true;
+	        RepeatingBck script = dupl.GetComponent<RepeatingBck>();
+	        script.isDupl = true;
+	        script.orgin = this;
 	        switch (ScrollDirection)
 	        {
 	            case Direction.Left:
@@ -51,6 +54,8 @@ public class RepeatingBck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isDupl)
+            Speed = orgin.Speed;
         float travelDis = Mathf.Repeat(Time.time * Speed, dist);
         Vector3 newPosition = startPos;
         switch (ScrollDirection)

@@ -258,13 +258,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AttackPoints:
-  - {x: 0, y: 0.5, z: 1.1754945e-38}
-  - {x: 0, y: 0, z: 1.1754945e-38}
-  - {x: 0, y: -0.5, z: 1.1754945e-38}
+  - {x: 0, y: 0.5, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: -0.5, z: 0}
   AttackDamage: 5
   AttackDist: 1.1
   AttackCooldown: 1.5
   AshEffect: {fileID: 1600451834259438, guid: 880b22dd1803c9045bc3fb41abae95dd, type: 2}
+  AshParentObj: {fileID: 0}
 --- !u!114 &114747445390931748
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,6 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fa6447b62edba4cae1d2b0c0d13308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MaxHealth: 100
 --- !u!114 &114983149066199986
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -349,7 +351,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219181457
-  m_SortingLayer: 3
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e83e6612abe677a43a0f3d8b832c5d99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -391,7 +393,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219181457
-  m_SortingLayer: 3
+  m_SortingLayer: -1
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d6567e9050d08434d9298665ca66ec29, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
@@ -433,7 +435,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 219181457
-  m_SortingLayer: 3
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d6567e9050d08434d9298665ca66ec29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

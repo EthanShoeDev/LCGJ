@@ -24,7 +24,9 @@ public class EnemyDmgHandler : MonoBehaviour
             if (Health <= 0)
             {
                 SimplePool.Despawn(transform.gameObject);
-                SimplePool.Spawn(AshEffect, transform.position, Quaternion.identity);
+                GameObject ash = SimplePool.Spawn(AshEffect, transform.position, Quaternion.identity);
+                if (AshParentObj != null)
+                    ash.transform.parent = AshParentObj.transform;
             }
         }
     }
@@ -34,6 +36,7 @@ public class EnemyDmgHandler : MonoBehaviour
     public float AttackDist = 0.5f;
     public float AttackCooldown = 1.5f;
     public GameObject AshEffect;
+    public GameObject AshParentObj;
 
     private float coolDownRemaining;
     private SmallHealthBar healthBar;
