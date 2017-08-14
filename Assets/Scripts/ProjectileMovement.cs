@@ -36,7 +36,7 @@ public class ProjectileMovement : MonoBehaviour
     {
         if (!col.CompareTag("Player") && !col.CompareTag("Projectile") && !col.CompareTag("Bumper") && !hasExploded)
         {
-            EnemyDmgHandler dmgHandler = col.transform.gameObject.GetComponent<EnemyDmgHandler>();
+            EnemyDmgHandler dmgHandler = col.transform.gameObject.GetComponentInParent<EnemyDmgHandler>();
             if (dmgHandler != null)
                 dmgHandler.Health -= Damage;
             hasExploded = true;
