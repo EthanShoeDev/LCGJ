@@ -320,7 +320,7 @@ MonoBehaviour:
   target: {fileID: 0}
   speed: 4
   nextWaypointDistance: 1.1
-  repathRate: 0.25
+  repathRate: 0.35
 --- !u!212 &212037590142807418
 SpriteRenderer:
   m_ObjectHideFlags: 1
