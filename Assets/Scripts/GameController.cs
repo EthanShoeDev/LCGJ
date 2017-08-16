@@ -8,9 +8,9 @@ public class GameController : MonoBehaviour
     //Put all info that needs carry over between scenes here (Lives, Health... etc)
     public float PlayerHealth;
     public float MaxHealth = 100;
+    [HideInInspector] public float TimeLeft = 30f;
 
     public static GameController Instance;
-    public GameObject GUI;
     public List<string> Levels;
     public int CurrentLevelIndex;
     // Use this for initialization

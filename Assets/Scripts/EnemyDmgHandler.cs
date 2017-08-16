@@ -44,6 +44,11 @@ public class EnemyDmgHandler : MonoBehaviour
     private PlayerDamage player;
     private Animator anim;
 
+    void OnEnable()
+    {
+        Start();
+    }
+
     // Use this for initialization
     void Start()
     {
